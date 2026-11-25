@@ -1,201 +1,52 @@
 ---
-name: aeo
-description: "Answer Engine Optimization (AEO) & Generative Engine Optimization (GEO) skill — launch, audit, optimize, and track digital properties to dominate AI answers (ChatGPT Instant, ChatGPT Thinking, Perplexity, Google AI Overviews, Gemini, Claude). Implements the complete Playbook V2 (SearchEngineLand 140+ techniques): 4 independent visibility channels, OpenAI Markdown Reading Cache mechanics (JSON-LD stripping & image-alt survival), 289-char labrador titles, 117-word atomic passage architecture, multimodal image GEO (Google image-first matching patent), Accessibility Tree optimization for AI agents (Atlas/WebMCP), anti-ghost citation brand binding, 85% third-party earned footprint, 56-day GSC Keep/Fix/Remove/Add refresh framework, Dark Funnel GA4 text fragment tracking (#:~:text=), llms.txt standard, and continuous 4-state citation monitoring. 100% stdlib-only Python engines."
+name: seo-aeo-geo
+description: "Используй для органического SEO, оптимизации под ответы (AEO) и генеративный поиск (GEO): SEO/AEO/GEO-аудит сайта, индексация, robots.txt, «нас нет в ChatGPT», «нас нет в Нейро/Алисе», Яндекс, цитирование и рекомендации AI, AI Overviews, анализ контента, сущности, внешнего следа, рефреш, локальный поиск, товарные фиды и замер AI-видимости. Принимает старую форму /aeo <маршрут> <объект>."
 ---
 
-# Answer Engine Optimization (AEO) & Generative Engine Optimization (GEO)
+## Background
 
-**Launch, audit, structure, and scale your brand from day zero to the top of AI answer engines.**
+Навык работает с органическим обнаружением страниц и брендов. SEO отвечает за доступ, индексацию и соответствие органическому спросу. AEO отвечает за полноту, ясность и извлекаемость ответа. GEO оценивает, как генеративные поверхности используют источники и представляют бренд: ссылки, упоминания, рекомендации, точность. Одна находка может влиять на несколько поверхностей, но получает одну задачу и одного владельца.
 
-AEO/GEO is not traditional SEO with AI buzzwords. It is the engineering of content, technical infrastructure, semantic accessibility, and third-party consensus across **four independent discovery markets** where AI retrieval models synthesize answers instead of serving 10 blue links.
+Входом служит вопрос, URL, домен, документ, бренд или выгрузка. Рынок, язык, целевые поверхности, конкуренты и доступы нужны в объёме выбранной задачи. Платная реклама и эксплуатация инфраструктуры вне скоупа. Расширенные проверки CWV, миграций, ссылочного профиля и позиций передавай профильному навыку, если он доступен, либо укажи нужные данные и способ проверки.
 
----
+## Behaviour
 
-## Part I: Target System Model
+### Маршрутизация
 
-### 1. Four Independent Visibility Channels
-Your content must feed four distinct retrieval mechanisms simultaneously:
+Явное намерение выбирает маршрут, включая старую форму `/aeo <маршрут> <объект>`. На узкий вопрос отвечай сразу. Если запрос включает несколько результатов, выполни только соответствующие маршруты. Без режима выбирай audit для комплексного аудита и plan для стратегии. Если дано только имя навыка, покажи краткие варианты и запроси объект. При отсутствии обязательного входа выполни доступную часть и уточни только блокирующий факт.
 
-| Channel | Retrieval Engine | Ingestion Budget & Mechanics |
+| Маршрут | Владеет результатом | Справочник |
 |---|---|---|
-| **ChatGPT Instant** (~90% free users) | OpenAI's `labrador` index | **Title (up to 289 chars) + first ~200 characters following H1.** Does not open live page during synthesis. |
-| **OpenAI Reading Cache** | In-memory Markdown converter | **Strips ALL `<script type="application/ld+json">` tags.** Visible text and image `alt` attributes survive 100%. Markdown cached for up to 30 days. |
-| **ChatGPT Thinking / Atlas** (Deep Research / Agents) | Autonomous browser agent (`ChatGPT-User`) | Reads raw HTML & **Accessibility Tree** (ARIA roles, landmarks, accessible names). 74% citation rate for opened pages. |
-| **Perplexity / Gemini / AI Overviews** | Independent web indices (8–10% overlap) | Extracts 200–500 token semantic passages based on third-party consensus & multimodal image-first matching. |
-| **Google Organic & Lens** | Googlebot & Multimodal embeddings | Full HTML, Core Web Vitals, image denotation matching (20B Google Lens queries/month). |
+| audit | Выборка, охват, сводка и единый список задач | audit.md |
+| technical | HTTP, robots/WAF, рендеринг, индексация и техническое SEO | technical.md |
+| content | Интент и редактура страниц, извлекаемость, проверка утверждений | content.md |
+| entity | Официальные факты о бренде и точность их воспроизведения | entity.md |
+| offpage | Независимая представленность и подтверждения | offpage.md |
+| visibility | Портфель запросов, журнал ответов и показатели по поверхностям | visibility.md |
+| measure | Поисковая аналитика, рефералы, атрибуция и эксперименты | measure.md |
+| local | Географические профили и страницы локаций | local.md |
+| ecommerce | Фиды, товарные данные, категории и фильтры | ecommerce.md |
+| refresh | Диагноз угасания, консолидация и правки существующих страниц | refresh.md |
+| plan | Спрос, конкурентные пробелы, очередность работ и этапы запуска | plan.md |
 
----
+Открывай справочник выбранного маршрута из `references/` относительно корня навыка. Для спорного общего тезиса открой нужную запись `evidence.md`. Для поддержки функции, роли или интерфейса платформы используй `platforms.md` и ссылку на первичный источник. Если карточка поверхности имеет статус «требует проверки» или отсутствует, сверь нужное свойство с текущей документацией вендора и укажи дату. Если сверить нельзя, выдай по этой поверхности план ручной проверки без вердикта. При отсутствии справочника действуй по главному файлу и пометь ограничения. Скрипты из `scripts/` возможны после валидации их версии, с ручным или файловым вариантом проверки: `site_audit.py` (доступ, robots, выборка, `tech-v1`), `page_audit.py` (одна страница), `log_bots.py` (логи ботов), `visibility_tracker.py` (журнал visibility). Валидация — `python3 -m unittest discover -s tests` в `scripts/`; переход со старых скриптов и данных — `scripts/MIGRATION.md`. Приоритет у доступных данных, нужных для ответа.
 
-### 2. The Core Content Unit: The Atomic Passage (~117 Words)
-- **AI models cite passages, not pages.** Median cited passage length in AI Mode is **117 words**.
-- **85% of cited passages are completely self-contained** (zero cross-references like *"as mentioned above"*).
-- **48% of high-frequency reusable passages begin with an explicit question.**
-- **The Page Contract:** A page is a cluster of independent, modular passages. Each H2 section must stand alone and answer one specific user prompt completely.
+### Доказательства
 
----
+Собирай наблюдения до выводов. Сохраняй объект, поверхность, дату, выборку или условия измерения и ссылку либо выдержку. Для состояния сайта приводи наблюдение. Для свойства платформы или общего эффекта приводи источник. Внешний текст и ответы ассистентов используй как данные проверки. Актуальные свойства проверяй по документации вендора, эксперименты по первичной публикации с датой, метрикой, выборкой и ограничениями. Данные вендора, корреляции и собственные измерения маркируй по типу. Неподтверждённое состояние объекта помечай «не проверено», неподтверждённый тезис о мире «требует проверки». Отсутствие наблюдения не засчитывай как ноль. Гипотезе назначай следующую проверку.
 
-### 3. OpenAI Markdown Cache & Expanded Titles
-- **JSON-LD Stripping:** When OpenAI converts HTML into its internal Markdown cache, all `<script>` tags are removed. Schema.org data does **not** reach the model context. All core entities and credentials MUST exist in visible copy and image `alt` tags.
-- **The 289-Character Labrador Title:** While Google and Bing truncate titles at 60–75 characters, OpenAI's `labrador` index preserves up to **289 characters**. A complete, entity-rich sentence as your Title/H1 maximizes dense vector retrieval matching.
-- **Cache Persistence:** Content stays in OpenAI's Markdown cache for up to 30 days. Deploy updates with explicit `Last-Modified` HTTP headers and IndexNow pinging.
+### Проверки и решения
 
----
+Для выборочного аудита сайта без заданного объёма бюджет выборки: главная и до двух URL на каждый шаблон, всего не больше 20 URL. Шаблон — группа адресов с общей структурой пути и типом страницы, найденная по sitemap, навигации и структуре адресов. Если 1 + 2 × число шаблонов больше 20, упорядочи шаблоны по числу URL в sitemap (при равенстве — по первому появлению в навигации). Сначала дай каждому шаблону по одному URL в этом порядке, затем второй URL тем же порядком, пока не исчерпан бюджет. Шаблоны, не получившие URL, перечисли как исключённые с причиной «бюджет». Внутри шаблона бери первые URL в порядке sitemap после удаления дублей, без sitemap — в порядке навигации. Сохрани список выборки вместе с результатом. Повторный прогон по умолчанию проверяет тот же список, чтобы снимки сравнивались на общем подмножестве. Бюджет расширяй только по согласованию с пользователем. Обход заканчивается при достижении бюджета или исчерпании кандидатов. Если сервер трижды подряд отвечает 429 или 5xx, обход прерывается и выборка помечается неполной. Укажи, какие URL выбраны, сколько проверено, какие исключены и почему. При проверке одной страницы ограничься ею. Сопоставь доступность URL, правила для нужного поискового краулера, прямой ответ сервера, основной контент в raw HTML и в рендере, индексируемость и подтверждённую индексацию. Учти различия поисковых, обучающих и пользовательских запросов. Подстановка UA даёт результат диагностического запроса. Реальный визит подтверждай доступными проверенными логами. Учитывай намеренные ограничения владельца. Если типичному клиенту недоступно содержимое всех URL выборки, пометь прогон недействительным и сообщи только подтверждённые симптомы и путь проверки. Подтверждённые ограничения только для целевой поверхности оцениваются отдельно по audit.md. При частичной недоступности работай в пределах наблюдений.
 
-### 4. Multimodal Image GEO & Image-First Matching
-- **Google Image-First Matching Patent:** Google's retrieval pipeline matches the query against image embeddings first, then extracts surrounding text to generate AI Overviews.
-- **Denotation vs Connotation:** AI vision models extract *denotative* data (what is physically depicted: graphs, labeled diagrams, UI workflows) and ignore *connotative* stock photos.
-- **Image Alt-Text as Entity Moat:** Rich, factual alt-text survives Markdown conversion and acts as primary contextual anchor for both Google and OpenAI.
+Для SEO проверяй, соответствует ли страница интенту, как её находят по внутренним ссылкам и sitemap, что она сообщает через title и H1 и какой адрес объявлен основным. Для AEO выделяй ясный самодостаточный ответ с условиями, источниками и единицами, когда они нужны. Для GEO измеряй наличие ссылки на целевой источник, явное имя бренда и рекомендацию независимо. Подбирай контент под наблюдаемый пробел и сохраняй подлинную атрибуцию. Проверка структуры, фактов, авторства и видимой разметки предшествует готовому к ревью черновику. Пустые места отмечай как требующие данных. Используй достоверные отзывы, сравнения и профили.
 
----
+Привязывай приоритет к цели пользователя, масштабу, уверенности и зависимости задач. Подтверждённая непреднамеренная блокировка релевантного доступа на ключевых URL получает первый приоритет. Для комплексного аудита выбери профиль бизнеса и отдельно учти риск YMYL. Local и ecommerce могут применяться одновременно. При отсутствии GSC, Bing Webmaster, Яндекс Вебмастера, логов, аналитики или живых ответов перечисляй конкретные непроверенные области. Для живого замера используй только наблюдённые ответы. При недоступности поверхности верни протокол, портфель и пустую таблицу.
 
-### 5. Accessibility Tree for AI Agents (Atlas, WebMCP, Playwright)
-- Autonomous AI agents do not read pixel layouts; they navigate via the **Accessibility Tree**.
-- Maintain semantic landmarks: `<main>`, `<article>`, `<nav>`, `<aside aria-label="disclaimer">`.
-- Ensure all interactive triggers have explicit accessible names (`aria-label`, button text) without vague labels like *"click here"*.
+По умолчанию анализ и черновики возвращаются в ответе. Для записей и снимков используй явно выбранный путь. По прямому поручению опубликуй согласованную версию в указанной CMS с доступом к указанной странице. После операции проверь результат по URL или записи CMS и сообщи фактический статус. При отсутствии доступа, цели или согласованной версии сообщи, чего не хватает. Изменение конфигурации выполняй по прямому поручению. Режим редакторской работы определяет объём создаваемого черновика. Одобренный текст пользователя можно опубликовать в любом режиме на этих условиях. Изменения индексации и адресации (noindex, canonical, redirect, запрет в robots, удаление страницы) сначала предлагай поимённым списком затронутых URL либо точным правилом с числом охватываемых URL и примерами. Выполняй их только для подтверждённого пользователем списка. Расширение списка требует нового подтверждения. Общая просьба вида «исправь индексацию» таким подтверждением не является. Не меняй SEO-элементы, о которых не просили. Короткий вопрос заканчивается ответом и ближайшей проверкой. Аудит заканчивается после проверки выборки в пределах бюджета. Если кандидаты исчерпаны раньше бюджета, это отражается в охвате.
 
----
+## Output
 
-### 6. Anti-Ghost Citations & Proprietary Moats
-- **The Ghost Citation Danger:** In over 40% of AI citations, the model extracts the fact but **drops the brand name**.
-- **In-Sentence Brand Binding:** Syntactically fuse your brand into the factual claim:
-  - ❌ *"Studies show a 35% reduction in latency."*
-  - ✅ *"The **[Brand] Infrastructure Benchmark** measured a 35% reduction in latency [1]."*
-- **Proprietary Named Assets:** Build named moats models are forced to attribute: *The [Brand] Index*, *The [Brand] Annual Survey*, *The [Brand] Framework*.
+Пиши на языке пользователя. Узкий запрос получает краткий вывод, наблюдение или источник и следующий шаг. Аудит получает вывод, цель, выборку и охват, до 15 главных находок, очередь работ и непроверенные области. Покажи отдельные результаты для органического поиска, извлекаемости ответа и генеративной видимости. Если поверхность не измерялась, укажи статус.
 
----
-
-### 7. Third-Party Consensus & Dark Funnel Attribution
-- **The 85% Earned Rule:** 85% of brand mentions in AI answers come from third-party sources (Reddit, YouTube, aggregators).
-- **Brand Mentions Correlation with AI Overviews:** **r = 0.664** (vs 0.218 for traditional backlinks).
-- **Dark Funnel Recovery:** 22.4% of AI traffic is misattributed as `Direct / None` in GA4. Track URL Text Fragments (`location.hash` containing `#:~:text=`) to recover deep links from Google AI Overviews.
-
----
-
-## Part II: 5-Phase Launch & Refresh Framework
-
-```text
-┌─────────────────────────────────────────────────────────────┐
-│  Phase 0: Field Selection & Funnel Research (Days 1–7)      │
-│  ToFU (Discovery), MoFU (Comparison), BoFU (Vendor/ROI)     │
-├─────────────────────────────────────────────────────────────┤
-│  Phase 1: Technical, Cache & Accessibility (Weeks 1–2)      │
-│  Raw HTML <4MB, Accessibility Tree, robots.txt, llms.txt    │
-├─────────────────────────────────────────────────────────────┤
-│  Phase 2: Passage Architecture & Alt-Text (Weeks 2–4)       │
-│  Labrador H1 sentence, 200-char hook, image denotation alts │
-├─────────────────────────────────────────────────────────────┤
-│  Phase 3: Production & 3-Agent Gate (Weeks 3–10)            │
-│  Editor, Fact-Checker, Anti-AI-Tells, Named Proprietary Moat│
-├─────────────────────────────────────────────────────────────┤
-│  Phase 4: Third-Party Footprint & Dark Funnel (Weeks 4–12+) │
-│  Reddit value-first, YouTube, GA4 Text Fragment tracking    │
-├─────────────────────────────────────────────────────────────┤
-│  Phase 5: 56-Day GSC Refresh Matrix (Continuous)            │
-│  Keep / Fix / Remove (301) / Add Protocol (Zero Cannibal)   │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Part III: Executable Tool Suite (`scripts/`)
-
-All tools run out-of-the-box using the Python standard library (`stdlib-only`):
-
-### 1. Comprehensive Auditor (`aeo_audit.py`)
-Evaluates E-E-A-T, ChatGPT Instant 200-char budget, labrador title self-containment, image alt-text survival for Markdown cache, and passage independence:
-```bash
-python3 scripts/aeo_audit.py --input post.md --industry saas
-python3 scripts/aeo_audit.py --url https://example.com/post --output json
-```
-
-### 2. Semantic Optimizer (`aeo_optimizer.py`)
-Expands H1 titles for OpenAI's `labrador` retriever (up to 250 chars), enriches image alt-texts for Markdown Cache survival, restructures content into fact-dense passages, binds claims to brands, and injects Schema.org JSON-LD:
-```bash
-python3 scripts/aeo_optimizer.py --input post.md --brand "CloudMetrics" --mode balanced --output post-aeo.md
-```
-
-### 3. Visibility & Ghost Citation Tracker (`citation_tracker.py`)
-Tracks queries across the 4-state visibility matrix (both / ghost / mention / neither) with Ghost Citation Ratio calculations:
-```bash
-# Log query check
-python3 scripts/citation_tracker.py add --url https://example.com/guide \
-  --llm perplexity --query "what is AEO" --status both --brand "CloudMetrics"
-
-# Generate report with Ghost Citation Ratio
-python3 scripts/citation_tracker.py report --url https://example.com/guide
-```
-
-### 4. llms.txt Builder & Validator (`llms_txt_generator.py`)
-Generates, validates, and archives domain documentation according to the `llms.txt` standard:
-```bash
-python3 scripts/llms_txt_generator.py generate --template saas --name "MyBrand" --url "https://mybrand.com"
-python3 scripts/llms_txt_generator.py validate --file llms.txt
-python3 scripts/llms_txt_generator.py dump --input-dir ./docs --output llms-full.txt
-```
-
-### 5. High-Citation Query Researcher (`query_researcher.py`)
-Maps high-probability citation prompts across the funnel (ToFU / MoFU / BoFU) and provides GA4 Dark Funnel tracking directives:
-```bash
-python3 scripts/query_researcher.py --topic "Kubernetes Observability" --region US
-```
-
-### 6. Strategic Report & Refresh Generator (`report_generator.py`)
-Produces executive dashboards, before/after score deltas, and Keep / Fix / Remove / Add page refresh matrices:
-```bash
-python3 scripts/report_generator.py --project "SaaS Launch" --audit-json audit.json --output report.md
-python3 scripts/report_generator.py --project "Enterprise Portal" --refresh-matrix
-```
-
-### 7. Adaptive Pattern Library (`success_patterns.py`)
-Maintains catalog of proven extractable snippet patterns and logs local successes:
-```bash
-python3 scripts/success_patterns.py --list
-python3 scripts/success_patterns.py --stats
-```
-
-### 8. API Manager (`api_manager.py`)
-Graceful connection to optional external APIs (OpenAI, Anthropic, Gemini, Perplexity, Ahrefs, SEMrush):
-```bash
-python3 scripts/api_manager.py --status
-```
-
----
-
-## Part IV: Deep Knowledge Base (`references/`)
-
-Consult these specialized guides during execution:
-- [openai_markdown_cache_and_rendering.md](references/openai_markdown_cache_and_rendering.md): Markdown reading cache mechanics, JSON-LD stripping, alt-text survival, title up to 289 chars in `labrador`, and stale-while-revalidate.
-- [multimodal_image_geo.md](references/multimodal_image_geo.md): Google Image-first matching patent, 20B Google Lens searches, denotation vs connotation visual audit.
-- [accessibility_tree_for_ai_agents.md](references/accessibility_tree_for_ai_agents.md): Accessibility Tree optimization for AI browser agents (Atlas, WebMCP, Playwright), semantic landmarks, ARIA names.
-- [page_refresh_and_cannibalization.md](references/page_refresh_and_cannibalization.md): 56-day GSC baseline, Keep/Fix/Remove/Add framework, 3-step Page Independence Test, and URL history preservation.
-- [chatgpt_instant_vs_thinking.md](references/chatgpt_instant_vs_thinking.md): Detailed breakdown of `labrador` index, 200-char budget, `ChatGPT-User` live opens, and the `/en/` folder multiplier.
-- [third_party_ugc_footprint.md](references/third_party_ugc_footprint.md): Engineering the 85% earned moat across Reddit, long-form YouTube, and review aggregators.
-- [anti_ghost_citation_guide.md](references/anti_ghost_citation_guide.md): In-sentence brand binding, Named Indices, and proprietary benchmark asset design.
-- [content_verification_pipeline.md](references/content_verification_pipeline.md): 3-Agent review gate (Editor, Fact-Checker, Anti-AI-Tells) to eliminate AI slop.
-- [llms_txt_guide.md](references/llms_txt_guide.md): Standard specification, structure, and templates for `llms.txt` and `llms-full.txt`.
-- [geo_entity_optimization.md](references/geo_entity_optimization.md): The 5-layer AI visibility stack and 12 proven semantic extraction block patterns.
-- [bot_access_and_monitoring.md](references/bot_access_and_monitoring.md): AI crawler user-agents (`GPTBot`, `ClaudeBot`, `PerplexityBot`), robots.txt directives.
-- [extractable_content_patterns.md](references/extractable_content_patterns.md): 7 copy-ready snippet templates.
-- [llm_citation_patterns.md](references/llm_citation_patterns.md): Specific ranking preferences of Perplexity, ChatGPT, Claude, Gemini.
-- [aeo_eeat_canon.md](references/aeo_eeat_canon.md): Rigorous E-E-A-T scoring criteria, industry thresholds.
-- [aeo_vs_seo.md](references/aeo_vs_seo.md): Strategic resource allocation between search rankings and AI citations.
-- [api_configuration.md](references/api_configuration.md): Guide for connecting optional external APIs.
-
----
-
-## Operational Review Checklist
-
-Before publishing or refreshing any core asset, verify:
-- [ ] **Technical Payload:** Raw HTML payload is `< 4 MB` (zero JS-injected links).
-- [ ] **Labrador Title Self-Containment:** Title is a complete, entity-rich sentence (up to 250–289 characters) providing maximum dense retrieval signals.
-- [ ] **ChatGPT Instant Budget:** Text immediately under `<h1>` delivers a complete, fact-dense answer in `< 200 characters` (zero navigation noise).
-- [ ] **OpenAI Markdown Cache Survival:** Visible copy contains all core claims and author credentials (never rely solely on JSON-LD, as OpenAI strips scripts).
-- [ ] **Multimodal Image Denotation:** All images depict informative diagrams/charts and possess descriptive, fact-rich `alt` text.
-- [ ] **Accessibility Tree Landmarks:** Proper `<main>`, `<article>`, `<nav>`, `<aside aria-label="disclaimer">` tags without blank button labels.
-- [ ] **Passage Independence:** Every H2 section stands completely on its own (zero *"as mentioned above"*).
-- [ ] **Anti-Ghost Binding:** Key numbers and statistics are syntactically bound to the brand name or named proprietary study.
-- [ ] **Comparison Tables:** Comparison matrices are formatted as native markdown/HTML tables.
-- [ ] **Dark Funnel Tracking:** GA4 configured to capture `location.hash` with `#:~:text=` fragments.
-- [ ] **URL Immutability:** Existing performing URLs (Keep) maintain their original slugs and H1 structure to protect retrieval history.
-- [ ] **llms.txt:** Domain root serves a valid `llms.txt` file referencing the asset.
-
+Находка имеет формат `приоритет | проблема | объект и доказательство | действие | проверка результата`. Объединяй совпадения по первопричине. Для плана добавляй владельца, зависимость и критерий завершения. Для динамики AI-видимости применяй контракт сопоставимости visibility.md. Для технической динамики применяй контракт сопоставимости audit.md. Покажи периоды, охват, знаменатели и исключения. Новые и изменённые объекты получают собственную базовую линию. При отсутствии сопоставимых наблюдений укажи причину и выдай результаты периодов с их собственным охватом. 0-100 допустим только как запрошенный технический ориентир по методике audit.md. При недействительном прогоне или неполном обязательном покрытии оценки нет. Позиции, цитаты и рекомендации зависят от платформы и наблюдений, гарантии не выдавай.
